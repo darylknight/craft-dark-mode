@@ -1,0 +1,24 @@
+{
+	"name": "craft-dark-mode",
+	"version": "1.0.0",
+	"description": "A dark mode stylsheet for Craft CMS",
+	"scripts": {
+		"dev": "development",
+		"development": "mix",
+		"watch": "mix watch",
+		"production": "mix --production"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/darylknight/craft-dark-mode"
+	},
+	"keywords": [],
+	"author": "Daryl Knight <daryl@codeknight.co.uk>",
+	"license": "ISC",
+	"devDependencies": {
+		"laravel-mix": "^6.0.11",
+		"resolve-url-loader": "^5.0.0",
+		"sass": "^1.49.10",
+		"sass-loader": "^12.6.0"
+	}
+}

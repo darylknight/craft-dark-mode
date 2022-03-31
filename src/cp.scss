@@ -1,0 +1,233 @@
+#alerts {
+	display: none;
+}
+
+// Variables
+:root {
+	--nav-hover-color: white;
+	--nav-hover-background: #42464d;
+	--muted-color: #aaa;
+	--red: #ed4245;
+	--green: #3aa65d;
+	--orange: #faa919;
+	--input-background: #40444b;
+	--dark: #202225;
+	--medium: #2f3136;
+	--body: #37393f;
+}
+
+// Basics
+.warning {
+	color: var(--orange) !important;
+}
+.success {
+	color: var(--green) !important;
+}
+
+// Global
+
+body,
+html {
+	background-color: var(--body);
+	color: white;
+}
+
+body.fixed-header #header {
+	background-color: var(--dark);
+	border-bottom: 1px solid #2c2e32;
+}
+
+#system-info {
+	background-color: #2f3136;
+}
+
+#global-sidebar {
+	background-color: #2f3136;
+}
+
+#global-sidebar > a[href]:not(.sel):hover,
+#global-sidebar *:not(.has-subnav) > a[href]:not(.sel):hover {
+	background-color: var(--nav-hover-background);
+}
+
+#global-sidebar > a[href]:hover,
+#global-sidebar > a[href].active,
+#global-sidebar > a[href]:active,
+#global-sidebar *:not(.has-subnav) > a[href]:hover,
+#global-sidebar *:not(.has-subnav) > a[href].active,
+#global-sidebar *:not(.has-subnav) > a[href]:active {
+	color: var(--nav-hover-color);
+}
+
+#global-header {
+	background: var(--body);
+	box-shadow: none;
+	border-bottom: 1px solid var(--dark);
+}
+
+// Selected navigation item
+a.sel {
+	background-color: var(--nav-hover-background) !important;
+	box-shadow: none !important;
+	color: var(--nav-hover-color) !important;
+}
+
+.sidebar .heading span {
+	color: #4f545c;
+}
+
+.sidebar nav li a {
+	color: #97989d;
+}
+
+#sidebar nav li a:not(.sel):hover {
+	background-color: var(--nav-hover-background);
+	color: var(--nav-hover-color);
+}
+
+// Content panes
+.content-pane {
+	background-color: lighten(#37393f, 5%);
+	box-shadow: none;
+}
+.pane .pane,
+#content .pane {
+	background-color: var(--input-background);
+}
+.message .body {
+	background-color: var(--input-background);
+	color: #ccc;
+}
+
+// Icon boxes (Utilities / Settings)
+ul.icons li a {
+	border: none;
+	color: #96989d;
+
+	&:hover {
+		background-color: #33353b;
+		color: white;
+
+		.icon.icon-mask svg rect,
+		.icon.icon-mask svg circle,
+		.icon.icon-mask svg ellipse,
+		.icon.icon-mask svg line,
+		.icon.icon-mask svg polyline,
+		.icon.icon-mask svg polygon,
+		.icon.icon-mask svg path,
+		.icon.icon-mask svg text {
+			fill: white;
+		}
+	}
+}
+
+ul.icons li a .icon.icon-mask svg rect,
+ul.icons li a .icon.icon-mask svg circle,
+ul.icons li a .icon.icon-mask svg ellipse,
+ul.icons li a .icon.icon-mask svg line,
+ul.icons li a .icon.icon-mask svg polyline,
+ul.icons li a .icon.icon-mask svg polygon,
+ul.icons li a .icon.icon-mask svg path,
+ul.icons li a .icon.icon-mask svg text {
+	fill: #babbbe;
+}
+
+// Buttons
+.btn {
+	color: #babbbe;
+	background-color: #2f3136;
+
+	&:hover {
+		color: white;
+	}
+}
+
+// Forms
+.field > .heading > label,
+.field > .heading > legend {
+	color: white;
+}
+
+.notice {
+	color: #01b0f5 !important;
+}
+
+a,
+a.go {
+	color: #01b0f5;
+}
+
+.selectize.select .selectize-control .selectize-input,
+.select:not(.selectize) select {
+	color: white;
+}
+
+.field > .instructions,
+.field > .heading > .instructions,
+.checkboxfield .instructions {
+	color: #b9babc;
+}
+
+.text:not(.selectize-text),
+.passwordwrapper,
+.border-box,
+.matrix-configurator > .field > .input,
+.selectize-text > .selectize-control > .selectize-input,
+.selectize.multiselect .selectize-control.multi .selectize-input,
+.multiselect > select {
+	background-color: var(--input-background);
+	color: white;
+}
+
+// Notifications
+#announcements-btn.unread:after {
+	background-color: var(--red);
+}
+
+// Tables
+table.data thead th,
+table.data thead td {
+	background-color: var(--nav-hover-background);
+	color: var(--nav-hover-color);
+}
+table.data thead th.ordered,
+table.data thead th.orderable:not(.ordered):hover {
+	background-color: var(--dark);
+}
+
+table.data tbody tr:not(.disabled):hover th,
+table.data tbody tr:not(.disabled):hover td {
+	background-color: #38393f;
+	color: var(--nav-hover-color);
+}
+
+#footer {
+	background-color: var(--nav-hover-background);
+}
+
+.light {
+	color: white !important;
+}
+
+// Footer
+#app-info {
+	color: var(--muted-color);
+}
+
+// Editor
+hr {
+	border-top: 1px solid var(--medium);
+}
+
+// Editor - side pane
+#details .meta {
+	box-shadow: none !important;
+}
+
+#details .meta.read-only {
+	background-color: #2f3136;
+}
+
+#details .meta:not(.read-only):not(.warning) {
+	background-color: var(--medium);
+}
