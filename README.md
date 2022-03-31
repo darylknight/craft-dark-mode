@@ -33,6 +33,10 @@ The stylesheet is written in Sass and compiled to CSS with [Laravel Mix](https:/
 -  [Laravel Mix](https://laravel-mix.com)
 -  Appearance credit to [Discord](https://discord.com), which this stylesheet is basically identical to until I spend more time updating it
 
+## To Do
+
+Improve the stylesheet. There are loads of places where the colours are wrong, this is just a start.
+
 ### Notes
 
 Hopefully at some point there will be either a first party dark mode plugin, or native dark mode support in the control panel.
