@@ -13,10 +13,10 @@ This stylesheet is best paired with the excellent [Control Panel CSS](https://pl
 There are a bunch of ways to use this stylesheet.
 
 1. Clone/fork this repository, run the build process locally and create your own version
-2. In Control Panel CSS under **CSS File(s)**, enter the full URL of the [compiled CSS](https://raw.githubusercontent.com/darylknight/craft-dark-mode/main/dist/css/cp.css) on GitHub under `dist/css/cp.css` (Click "Raw")
+2. In Control Panel CSS, under **CSS File(s)**, link directly to the compiled CSS [hosted on jsDelivr](https://cdn.jsdelivr.net/gh/darylknight/craft-dark-mode/dist/css/cp.css)
 3. Copy the CSS and paste it into your [Control Panel CSS](https://plugins.craftcms.com/cp-css) editor under **Additional CSS**
 
-If you make your own stylesheet, you'll have full control over how everything looks. If you link to this one, you'll get updates automatically without having to do anything (assuming I keep this updated).
+If you compile your own stylesheet, you'll have full control over how everything looks. If you link to the raw CSS here, you'll get updates automatically without having to do anything (assuming I keep this updated).
 
 ## Compiling
 
@@ -32,6 +32,7 @@ The stylesheet is written in Sass and compiled to CSS with [Laravel Mix](https:/
 
 -  [Laravel Mix](https://laravel-mix.com)
 -  Appearance credit to [Discord](https://discord.com), which this stylesheet is basically identical to until I spend more time updating it
+-  Linking directly to the raw CSS in this repository doesn't work as the MIME type is incorrect. However, through some magic I don't understand, jsdelivr.com will automatically serve the CSS file in this repository as the correct type, so you can link to that directly.
 
 ## To Do
 
