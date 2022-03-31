@@ -12,9 +12,9 @@ This stylesheet is best paired with the excellent [Control Panel CSS](https://pl
 
 There are a bunch of ways to use this stylesheet.
 
-1. Clone/fork this repository, run the build process locally and make your own version
-2. Link to the raw CSS version of this stylesheet on GitHub
-3. Copy the CSS and paste it into your Control Panel CSS editor
+1. Clone/fork this repository, run the build process locally and create your own version
+2. In Control Panel CSS under **CSS File(s)**, enter the full URL of the [compiled CSS](https://raw.githubusercontent.com/darylknight/craft-dark-mode/main/dist/css/cp.css) on GitHub under `dist/css/cp.css` (Click "Raw")
+3. Copy the CSS and paste it into your [Control Panel CSS](https://plugins.craftcms.com/cp-css) editor under **Additional CSS**
 
 If you make your own stylesheet, you'll have full control over how everything looks. If you link to this one, you'll get updates automatically without having to do anything (assuming I keep this updated).
 
