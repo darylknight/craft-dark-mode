@@ -1,13 +1,18 @@
 // Variables
 :root {
-	--nav-hover-background: #42464d;
-	--muted-color: #aaa;
 	--red: #ed4245;
-	--green: #3aa65d;
+	--green: #47c46e;
 	--orange: #faa919;
-	--dark: #202225;
-	--light: #97989d;
-	--medium: #2f3136;
+	--blue: #01b0f5;
+	--gray-900: #111827;
+	--gray-800: #1f2937;
+	--gray-700: #374151;
+	--gray-600: #4b5563;
+	--gray-500: #6b7280;
+	--gray-400: #9ca3af;
+	--gray-300: #d1d5db;
+	--gray-200: #e5e7eb;
+	--gray-50: #f9fafb;
 }
 
 // Basics
@@ -20,44 +25,54 @@
 
 a,
 a.go {
-	color: #01b0f5;
+	color: var(--blue);
 }
 
 // Selected navigation item
 a.sel {
-	background-color: var(--nav-hover-background);
+	background-color: var(--gray-700);
 	box-shadow: none;
-	color: white;
+	color: var(--gray-50);
+}
+
+// UI Tips
+.readable blockquote.note.tip {
+	color: var(--blue);
+	border-color: var(--blue);
+
+	&:before {
+		color: var(--blue);
+	}
 }
 
 // Global
 
 body,
 html {
-	background-color: var(--medium);
-	color: white;
+	background-color: var(--gray-800);
+	color: var(--gray-50);
 }
 
 body.fixed-header #header {
-	background-color: var(--dark);
-	border-bottom: 1px solid #2c2e32;
+	background-color: var(--gray-900);
+	border-bottom: 1px solid var(--gray-800);
 }
 
 #system-info {
-	background-color: var(--dark);
+	background-color: var(--gray-900);
 }
 
 #global-sidebar {
-	background-color: var(--dark);
+	background-color: var(--gray-900);
 
 	a {
-		color: var(--light);
+		color: var(--gray-300);
 	}
 }
 
 #global-sidebar > a[href]:not(.sel):hover,
 #global-sidebar *:not(.has-subnav) > a[href]:not(.sel):hover {
-	background-color: var(--nav-hover-background);
+	background-color: var(--gray-700);
 }
 
 #global-sidebar > a[href]:hover,
@@ -66,36 +81,39 @@ body.fixed-header #header {
 #global-sidebar *:not(.has-subnav) > a[href]:hover,
 #global-sidebar *:not(.has-subnav) > a[href].active,
 #global-sidebar *:not(.has-subnav) > a[href]:active {
-	color: white;
+	color: var(--gray-50);
 }
 
 #global-header {
 	background: var(--body);
 	box-shadow: none;
-	border-bottom: 1px solid var(--dark);
+	border-bottom: 1px solid var(--gray-900);
 }
 
 #nav li:not(.has-subnav) > a.sel {
-	background-color: var(--nav-hover-background);
-	color: white;
+	background-color: var(--gray-700);
+	color: var(--gray-50);
 }
 
 .sidebar .heading span {
-	color: #4f545c;
+	color: var(--gray-500);
 }
 
 .sidebar nav li a {
-	color: var(--light);
+	color: var(--gray-300);
 }
 
-#sidebar nav li a:not(.sel):hover {
-	background-color: var(--nav-hover-background);
-	color: white;
+#sidebar nav li a:not(.sel):hover,
+.sidebar nav li a:not(.sel):hover {
+	background-color: var(--gray-700);
+	color: var(--gray-50);
 }
 
-#sidebar nav li a.sel {
-	background-color: var(--nav-hover-background);
-	color: white;
+#sidebar nav li a.sel,
+.sidebar nav li a.sel,
+.sidebar nav li:not(.has-subnav) > a.sel {
+	background-color: var(--gray-700);
+	color: var(--gray-50);
 	box-shadow: none;
 }
 
@@ -105,7 +123,7 @@ body.fixed-header #header {
 .pane-tabs ul li a.sel {
 	background-color: #42464d;
 	box-shadow: none;
-	color: white;
+	color: var(--gray-50);
 }
 
 #content {
@@ -119,7 +137,7 @@ body.fixed-header #header {
 	}
 }
 .message .body {
-	background-color: var(--nav-hover-background);
+	background-color: var(--gray-700);
 	color: #ccc;
 }
 
@@ -130,7 +148,7 @@ ul.icons li a {
 
 	&:hover {
 		background-color: #33353b;
-		color: white;
+		color: var(--gray-50);
 
 		.icon.icon-mask svg rect,
 		.icon.icon-mask svg circle,
@@ -140,9 +158,20 @@ ul.icons li a {
 		.icon.icon-mask svg polygon,
 		.icon.icon-mask svg path,
 		.icon.icon-mask svg text {
-			fill: white;
+			fill: var(--gray-50);
 		}
 	}
+}
+
+.menu,
+.ui-datepicker,
+.ui-timepicker-list {
+	background-color: #2a2a2a;
+}
+
+.ui-datepicker-calendar th span,
+.ui-datepicker-calendar td a {
+	color: #6e757b;
 }
 
 ul.icons li a .icon.icon-mask svg rect,
@@ -158,35 +187,57 @@ ul.icons li a .icon.icon-mask svg text {
 
 // Buttons
 .btn {
-	color: white;
+	color: var(--gray-50);
 	background-color: #606e7b;
 
 	&:before,
 	&:after,
 	&:hover {
-		color: white;
+		color: var(--gray-50);
 	}
 }
 
 .btn.dashed,
 .copytextbtn {
-	border: 1px solid #666;
+	border: 1px solid var(--gray-300);
 	input,
 	span {
-		color: #999;
+		color: var(--gray-300);
+	}
+
+	&:hover,
+	&:focus {
+		border: 1px solid var(--gray-200);
+
+		input,
+		span {
+			color: var(--gray-200);
+		}
 	}
 }
 
+.btn:not(.disabled):not(.inactive):hover:before,
+.btn:not(.disabled):not(.inactive):hover:after,
+.btn:not(.disabled):not(.inactive).hover:before,
+.btn:not(.disabled):not(.inactive).hover:after {
+	color: var(--gray-300);
+}
+
 // Forms
+
+.required:after {
+	color: var(--red);
+}
+
 #toolbar .btn,
 #toolbar .text {
-	color: white;
+	color: var(--gray-50);
 	border: 1px solid transparent;
 }
 
 .field > .heading > label,
 .field > .heading > legend {
-	color: white;
+	color: var(--gray-50);
 }
 
 #content :not(.meta) > .flex-fields > :not(h2):not(hr):before,
@@ -204,7 +255,7 @@ ul.icons li a .icon.icon-mask svg text {
 
 .selectize.select .selectize-control .selectize-input,
 .select:not(.selectize) select {
-	color: white;
+	color: var(--gray-50);
 }
 
 .field > .instructions,
@@ -220,8 +271,8 @@ ul.icons li a .icon.icon-mask svg text {
 .selectize-text > .selectize-control > .selectize-input,
 .selectize.multiselect .selectize-control.multi .selectize-input,
 .multiselect > select {
-	background-color: var(--nav-hover-background);
-	color: white;
+	background-color: var(--gray-700);
+	color: var(--gray-50);
 }
 
 // Notifications
@@ -232,36 +283,36 @@ ul.icons li a .icon.icon-mask svg text {
 // Tables
 table.data thead th,
 table.data thead td {
-	background-color: var(--nav-hover-background);
-	color: white;
+	background-color: var(--gray-700);
+	color: var(--gray-50);
 }
 table.data thead th.ordered,
 table.data thead th.orderable:not(.ordered):hover {
-	background-color: var(--medium);
+	background-color: var(--gray-800);
 }
 
 table.data tbody tr:not(.disabled):hover th,
 table.data tbody tr:not(.disabled):hover td {
 	background-color: #38393f;
-	color: white;
+	color: var(--gray-50);
 }
 
 #footer {
-	background-color: var(--nav-hover-background);
+	background-color: var(--gray-700);
 }
 
 .light {
-	color: white !important;
+	color: var(--gray-50) !important;
 }
 
 // Footer
 #app-info {
-	color: var(--muted-color);
+	color: var(--gray-300);
 }
 
 // Editor
 hr {
-	border-top: 1px solid var(--medium);
+	border-top: 1px solid var(--gray-800);
 }
 
 // Editor - side pane
@@ -270,22 +321,22 @@ hr {
 }
 
 #details .meta.read-only {
-	background-color: var(--dark);
+	background-color: var(--gray-900);
 }
 
 #details .meta:not(.read-only):not(.warning) {
-	background-color: var(--dark);
+	background-color: var(--gray-900);
 }
 
 // Plugin store
 .ps-wrapper .ps-sidebar {
-	background-color: var(--dark);
+	background-color: var(--gray-900);
 }
 ul.categories li a {
-	color: var(--light);
+	color: var(--gray-300);
 }
 .text-grey-darkest {
-	color: var(--light);
+	color: var(--gray-300);
 }
 
 // Matrix
@@ -293,14 +344,14 @@ ul.categories li a {
 	background-color: #3b3a43;
 
 	> .titlebar {
-		background-color: var(--medium);
+		background-color: var(--gray-800);
 	}
 }
 
-// Redactor
+// Redactor styles have to be !important
 .redactor
 	.redactor-box:not(.redactor-box-fullscreen):not(.redactor-source-view) {
-	background-color: var(--nav-hover-background) !important;
+	background-color: var(--gray-700) !important;
 }
 
 .redactor-box .redactor-styles {
@@ -309,5 +360,97 @@ ul.categories li a {
 
 .redactor-air a,
 .redactor-toolbar a {
-	color: white !important;
+	color: var(--gray-50) !important;
+}
+
+.redactor-dropdown {
+	background-color: var(--gray-800) !important;
+
+	a {
+		color: var(--gray-50) !important;
+	}
+}
+
+// Modals {
+.modal,
+.hud .body {
+	background-color: var(--gray-800);
+}
+
+.header,
+.hud-header,
+.footer,
+.hud-footer {
+	background-color: var(--gray-800);
+}
+.sidebar {
+	background-color: var(--gray-700);
+}
+
+.preview-thumb-container.loading:after {
+	content: '';
+	font-size: 0;
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: red !important;
+}
+
+// Alerts {
+#alerts {
+	background-color: var(--red);
+	color: var(--gray-50);
+	border-left: 5px solid var(--red);
+
+	li a.go {
+		color: var(--gray-50);
+		border: 1px solid var(--gray-50);
+
+		&:after {
+			color: var(--gray-50);
+		}
+	}
+}
+
+// Field Desginers
+.layoutdesigner .fld-workspace {
+	background-color: var(--gray-900);
+
+	// Grid squares
+	background-image: linear-gradient(
+			to right,
+			var(--gray-800) 1px,
+			transparent 0px
+		),
+		linear-gradient(to bottom, var(--gray-800) 1px, transparent 1px);
+}
+
+// field boxes
+.fld-sidebar,
+.fld-tab .tabs .tab,
+.fld-tab .fld-tabcontent,
+.fld-new-tab-btn,
+.fld-new-tab-btn:hover {
+	background-color: var(--gray-700);
+}
+
+// HR
+.fld-element {
+	background-color: var(--gray-700);
+}
+.fld-hr:before,
+.fld-hr .smalltext {
+	background-color: var(--gray-600);
+}
+
+// Field items
+.fld-element.fld-field {
+	background-color: var(--gray-600);
+}
+
+.fld-element .field-name .fld-element-label h4 {
+	color: var(--gray-200);
 }
