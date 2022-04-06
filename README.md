@@ -6,7 +6,7 @@ This is a dark mode stylesheet for the Craft CMS control panel. It's not perfect
 
 It's still a work in progress, but here's a screenshot of what you can expect:
 
-![image](https://user-images.githubusercontent.com/1250017/162060467-fc440e73-87b0-4eac-9223-37c9fcbf1899.png)
+![image](https://user-images.githubusercontent.com/1250017/162060707-7af4ac61-7cc8-4f9e-9de2-dc6f411b2be6.png)
 
 ## Prerequisites
 
