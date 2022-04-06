@@ -2,6 +2,12 @@
 
 This is a dark mode stylesheet for the Craft CMS control panel. It's not perfect, but it'll stop me getting blinded when I'm working on sites late at night. Suggestions and improvements welcome!
 
+## How does it look?
+
+It's still a work in progress, but here's a screenshot of what you can expect:
+
+![image](https://user-images.githubusercontent.com/1250017/162060467-fc440e73-87b0-4eac-9223-37c9fcbf1899.png)
+
 ## Prerequisites
 
 This stylesheet is best paired with the excellent [Control Panel CSS](https://plugins.craftcms.com/cp-css). That plugin will allow you to use custom CSS inside the Craft control panel, or link to this stylesheet directly.
