@@ -31,12 +31,8 @@ The stylesheet is written in Sass and compiled to CSS with [Laravel Mix](https:/
 ## Built With
 
 -  [Laravel Mix](https://laravel-mix.com)
--  Appearance credit to [Discord](https://discord.com), which this stylesheet is basically identical to until I spend more time updating it
+-  Appearance credit to [Tailwind](https://tailwindcss.com). Unfortunately I can't build it with Tailwind as we're just overriding CSS, not changing HTML, but I've taken the colour scheme from the Tailwind color palette
 -  Linking directly to the raw CSS in this repository doesn't work as the MIME type is incorrect. However, through some magic I don't understand, jsdelivr.com will automatically serve the CSS file in this repository as the correct type, so you can link to that directly.
-
-## To Do
-
-Improve the stylesheet. There are loads of places where the colours are wrong, this is just a start.
 
 ### Notes
 
