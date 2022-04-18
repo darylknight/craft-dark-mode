@@ -22,11 +22,11 @@ There are a bunch of ways to use this stylesheet.
 2. In Control Panel CSS, under **CSS File(s)**, link directly to the compiled CSS [hosted on jsDelivr](https://cdn.jsdelivr.net/gh/darylknight/craft-dark-mode/dist/css/cp.css)
 3. Copy the CSS and paste it into your [Control Panel CSS](https://plugins.craftcms.com/cp-css) editor under **Additional CSS**
 
-If you compile your own stylesheet, you'll have full control over how everything looks. If you link to the raw CSS here, you'll get updates automatically without having to do anything (assuming I keep this updated).
+If you compile your own stylesheet, you'll have full control over how everything looks. If you link to the raw CSS here, you'll get updates automatically without having to do anything.
 
 ## Compiling
 
-The stylesheet is written in Sass and compiled to CSS with [Laravel Mix](https://laravel-mix.com). If you want to run the compiler locally:
+The stylesheet is written in Sass and compiled with [Laravel Mix](https://laravel-mix.com). If you want to run the compiler locally:
 
 -  Using Terminal, navigate to your project directory and run `npm install`
 -  To watch files for changes and refresh the page after saving changes, run `npm run watch`
@@ -38,7 +38,7 @@ The stylesheet is written in Sass and compiled to CSS with [Laravel Mix](https:/
 
 -  [Laravel Mix](https://laravel-mix.com)
 -  Appearance credit to [Tailwind](https://tailwindcss.com). Unfortunately I can't build it with Tailwind as we're just overriding CSS, not changing HTML, but I've taken the colour scheme from the Tailwind color palette
--  Linking directly to the raw CSS in this repository doesn't work as the MIME type is incorrect. However, through some magic I don't understand, jsdelivr.com will automatically serve the CSS file in this repository as the correct type, so you can link to that directly.
+-  Linking directly to the raw CSS in this repository doesn't work as the MIME type is incorrect. However, through some magic I don't understand, jsdelivr.com will automatically serve the CSS file in this repository [here](https://cdn.jsdelivr.net/gh/darylknight/craft-dark-mode/dist/css/cp.css) as the correct type, so you can link to that directly.
 
 ### Notes
 
