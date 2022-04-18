@@ -1,0 +1,30 @@
+// Redactor styles have to be !important
+.redactor
+	.redactor-box:not(.redactor-box-fullscreen):not(.redactor-source-view) {
+	background-color: var(--gray-700) !important;
+}
+
+.redactor-box .redactor-styles {
+	color: #dcddde !important;
+}
+
+.redactor-air a,
+.redactor-toolbar a {
+	color: var(--gray-50) !important;
+}
+
+.redactor-dropdown {
+	background-color: var(--gray-800) !important;
+
+	a {
+		color: var(--gray-50) !important;
+	}
+}
+
+.redactor-dropdown a.redactor-dropdown-item-disabled {
+	background-color: var(--gray-700) !important;
+
+	a {
+		color: var(--gray-50) !important;
+	}
+}

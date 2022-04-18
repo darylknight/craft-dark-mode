@@ -1,0 +1,16 @@
+// Tables
+table.data thead th,
+table.data thead td {
+	background-color: var(--gray-700);
+	color: var(--gray-50);
+}
+table.data thead th.ordered,
+table.data thead th.orderable:not(.ordered):hover {
+	background-color: var(--gray-800);
+}
+
+table.data tbody tr:not(.disabled):hover th,
+table.data tbody tr:not(.disabled):hover td {
+	background-color: #38393f;
+	color: var(--gray-50);
+}

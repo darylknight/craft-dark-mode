@@ -1,0 +1,21 @@
+body,
+html {
+	background-color: var(--gray-800);
+	color: var(--gray-50);
+}
+
+.warning {
+	color: var(--orange) !important;
+}
+.success {
+	color: var(--green) !important;
+}
+
+a,
+a.go {
+	color: var(--blue);
+}
+
+.light {
+	color: var(--gray-50) !important;
+}

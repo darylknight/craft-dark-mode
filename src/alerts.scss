@@ -1,0 +1,15 @@
+// Alerts {
+#alerts {
+	background-color: var(--red);
+	color: var(--gray-50);
+	border-left: 5px solid var(--red);
+
+	li a.go {
+		color: var(--gray-50);
+		border: 1px solid var(--gray-50);
+
+		&:after {
+			color: var(--gray-50);
+		}
+	}
+}
