@@ -17,12 +17,25 @@
 }
 
 @import 'base';
+@import 'notifications';
+@import 'tables';
+@import 'footer';
+@import 'plugin-store';
+@import 'matrix';
+@import 'redactor';
+@import 'modals';
+@import 'alerts';
 
 // Selected navigation item
-a.sel {
+a.sel,
+.pane-tabs [role='tablist'] [role='tab'].sel {
 	background-color: var(--gray-700);
 	box-shadow: none;
 	color: var(--gray-50);
+
+	span {
+		color: var(--gray-50);
+	}
 }
 
 // UI Tips
@@ -292,33 +305,34 @@ ul.icons li a .icon.icon-mask svg text {
 	color: var(--gray-50);
 }
 
-@import 'notifications';
-@import 'tables';
-@import 'footer';
-
 // Editor
 hr {
 	border-top: 1px solid var(--gray-800);
 }
 
 // Editor - side pane
-#details .meta {
+#details .meta,
+#details .details > .field > .input > .text.fullwidth {
 	box-shadow: none !important;
 }
 
+#details .details .meta:not(.read-only):not(.warning),
+#details .details > .field > .input > .text.fullwidth {
+	background-color: var(--gray-600) !important;
+}
+
+.details .meta:not(.read-only) > .data > .heading,
+.details .meta:not(.read-only) > .data > .heading > label,
+.details .meta:not(.read-only) > .field > .heading,
+.details .meta:not(.read-only) > .field > .heading > label,
+.card-seo-google__description {
+	background-color: var(--gray-600) !important;
+	color: var(--gray-50);
+}
+
 #details .meta.read-only {
-	background-color: var(--gray-900);
+	background-color: var(--gray-800);
 }
-
-#details .meta:not(.read-only):not(.warning) {
-	background-color: var(--gray-900);
-}
-
-@import 'plugin-store';
-@import 'matrix';
-@import 'redactor';
-@import 'modals';
-@import 'alerts';
 
 // Field Desginers
 .layoutdesigner .fld-workspace {
