@@ -1,5 +1,7 @@
 # Craft CMS Dark Mode
 
+Note: This will not be updated for Craft 4. Confirmation from Brandon that they will add a dark mode in either Craft 5 or 6 [here](https://discord.com/channels/456442477667418113/456442477667418115/1041900612842946671).
+
 This is a dark mode stylesheet for the Craft CMS control panel. It's not perfect, but it'll stop me getting blinded when I'm working on sites late at night. Suggestions and improvements welcome!
 
 ## How does it look?
